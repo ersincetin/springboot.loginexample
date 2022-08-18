@@ -1,4 +1,4 @@
-package com.springboot.loginexampla.springboot.DataAccessLayer;
+package com.springboot.loginexampla.springboot.DataAccess;
 
 import com.springboot.loginexampla.springboot.Entities.User;
 import org.hibernate.Session;
@@ -30,24 +30,25 @@ public class HibernateUserDal implements IUserDal {
     @Override
     @Transactional
     public User getById(int id) {
-        return null;
+        User user = session.get(User.class, id);
+        return user;
     }
 
     @Override
     @Transactional
     public void add(User user) {
-
+        session.saveOrUpdate(user);
     }
 
     @Override
     @Transactional
     public void update(User user) {
-
+        session.saveOrUpdate(user);
     }
 
     @Override
     @Transactional
     public void delete(User user) {
-
+        session.delete(user);
     }
 }

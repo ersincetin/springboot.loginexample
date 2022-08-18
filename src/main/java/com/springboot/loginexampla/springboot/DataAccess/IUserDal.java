@@ -1,4 +1,4 @@
-package com.springboot.loginexampla.springboot.DataAccessLayer;
+package com.springboot.loginexampla.springboot.DataAccess;
 
 import com.springboot.loginexampla.springboot.Entities.User;
 
